@@ -75,7 +75,8 @@ module Coinpayments
       api_call(args)
     end
     
-    def self.ping
-      p 'ping'
+    def self.get_conversion_info(id)
+      args = {id: id }
+      api_call(args)
     end
 end
