@@ -69,5 +69,13 @@ module Coinpayments
       args = { id: id }
       api_call(args)
     end
-
+    
+    def self.convert(amount,from,to,address, options ={})
+      args = { amount: amount, to: to, from: from, address: address }.merge!(options)
+      api_call(args)
+    end
+    
+    def self.ping
+      p 'ping'
+    end
 end
